@@ -7,9 +7,7 @@
 def verifyPalindrome(string:str, inverted_string="", c=1):
     
     if len(string) == len(inverted_string):
-        if string == inverted_string:
-            return True
-        else: return False
+        return True if string == inverted_string else False
     else:
         inverted_string = inverted_string + string[len(string)-c]
         c += 1
