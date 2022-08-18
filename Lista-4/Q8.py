@@ -3,7 +3,8 @@
 # e da direita para a esquerda. Alguns exemplos de palíndromo são "E até o
 # papa poeta é" (se os espaços, pontuação e acentos forem ignorados).
 
-def verifyPalindrome(string, inverted_string="", c=1):
+
+def verifyPalindrome(string:str, inverted_string="", c=1):
     
     if len(string) == len(inverted_string):
         if string == inverted_string:
@@ -12,7 +13,7 @@ def verifyPalindrome(string, inverted_string="", c=1):
     else:
         inverted_string = inverted_string + string[len(string)-c]
         c += 1
-        return verifyPalindrome(string, inverted_string=inverted_string, c=c)           
+        return verifyPalindrome(string.replace(" ",''), inverted_string=inverted_string, c=c)           
 
 
-print(verifyPalindrome("anaaaad"))
+print(verifyPalindrome("e ate o papa poeta e"))
