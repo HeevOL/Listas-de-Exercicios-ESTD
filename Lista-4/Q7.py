@@ -7,10 +7,11 @@ def doubleFactorial(num):
     if num%2 == 0:
         return "Parâmetro da função deve ser Ímpar!"
     else:
-        if num == 1:
-            return num
-        else:
-            return num * doubleFactorial(num - 2)
+        return num if num == 1 else num * doubleFactorial(num - 2)
+            
 
+def doubleFactorial2(num):
+    return "Parâmetro da função deve ser Ímpar!" if num%2 == 0 else num if num == 1 else num * doubleFactorial2(num - 2)
 
-print(doubleFactorial(9))
+        
+print(doubleFactorial2(5))

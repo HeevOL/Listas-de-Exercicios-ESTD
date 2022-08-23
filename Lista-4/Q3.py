@@ -6,11 +6,17 @@ def countCharInWord(word, char):
         return 0
     else:
         if word[0] == char:
-            word = word[1:]
-            return 1 + countCharInWord(word, char)
+            return 1 + countCharInWord(word[1:], char)
         else:
-            word = word[1:]
-            return countCharInWord(word, char)
+            return countCharInWord(word[1:], char)
+
+
+def countCharInWord2(word, char):
+    if len(word) == 0:
+        return 0
+    else:
+        return 1 + countCharInWord2(word[1:], char) if word[0] == char else countCharInWord2(word[1:], char)
 
 
 print(countCharInWord("estrutura", "u"))
+print(countCharInWord2("estrutura", "u"))

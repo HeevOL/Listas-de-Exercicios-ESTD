@@ -14,4 +14,16 @@ def fibonacci(num, fib=[0, 1], c = 2):
         return fibonacci(num, c=c)
 
 
-print(fibonacci(7))
+def fibonacci2(num, n1=0, n2=1, next=1):
+    if num == 1:
+        return 0
+    elif num == 2:
+        return next
+    else:
+        next = n1 + n2
+        n1 = n2
+        n2 = next        
+        return fibonacci2(num-1,n1,n2,next)
+
+
+print(fibonacci2(9))

@@ -9,10 +9,8 @@ def inversor(word):
         return inverted_word + inversor(word[:len(word)-1])
 
 
-# def inversor(word):
-#     if len(word) == 0:
-#         return word
-#     else:
-#         return inversor(word[1:]) + word[0]
+def inversor2(word):
+    return word if len(word) == 0 else inversor2(word[1:]) + word[0]
+
     
-print(inversor("Heverton"))
+print(inversor2("Heverton"))

@@ -3,9 +3,8 @@
 
 def printNumbers(num):
     if num != -1:
-        print(num)
-        num = num - 1        
-        printNumbers(num)
+        print(num)     
+        printNumbers(num-1)
 
 
 printNumbers(10)
