@@ -1,0 +1,26 @@
+1. Qual os valores retornados durante a a seguinte série de operações em uma pilha, quando executadas em um pilha "p"
+inicialmente vazia? p.push(5), p.push(3), p.pop(), p.push(2), p.push(8), p.pop(), p.pop(), p.push(9), p.push(1), p.pop(),
+p.push(7), p.push(6), p.pop(), p.pop(), p.push(4), p.pop(), p.pop()
+
+5
+5,3
+5
+5,2
+5,2,8
+5,2
+5
+5,9
+5,9,1
+5,9
+5,9,7
+5,9,7,6
+5,9,7
+5,9
+5,9,4
+5,9
+5
+
+2. Considere que em uma pilha "p" inicialmente vazia foi executado um total de 25 operações push, 12 operações top e 10
+operações pop, 3 das quais lançaram exceção "Pilha Vazia". Qual o tamanho atual da pilha?
+
+15 ou 16 ou 17 ou 18
