@@ -7,7 +7,7 @@ def stackCopy(pilha, copia=[]):
     temp = pilha.pop()
     stackCopy(pilha)
     copia.append(temp)
-    pilha.append(temp)
+    pilha.append(temp) # Refiz a pilha para que a original tbm possa ser usada no programa.
     return copia
 
 l = [1,2,3,4,5,6]
